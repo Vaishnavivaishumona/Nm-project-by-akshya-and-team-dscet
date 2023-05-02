@@ -1,0 +1,55 @@
+
+
+> **Data Visualization**
+
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+house_data = pd.read_csv("House Price India CSV format.csv")
+# print(house_data)
+
+
+
+> **Univariate**
+
+
+
+plt.hist(house_data['living area'], bins=50)
+plt.xlabel('Living Area')
+plt.ylabel('Frequency')
+plt.title('Distribution of Living Area')
+plt.show()
+
+print(house_data.describe())
+
+
+
+> **Bivaraiate**
+
+
+
+x = house_data['living area']
+y = house_data['Price']
+plt.xlabel('Living Area')
+plt.ylabel('Price')
+
+plt.title("Relationship between Living Area and Price")
+plt.scatter(x,y)
+plt.show()
+
+
+
+> **Multivariate**
+
+
+
+pd.plotting.scatter_matrix(house_data[['Price', 'living area', 'lot area']], figsize=(10,10))
+plt.show()
+
+# Create box plots for selected variables
+house_data[['Price', 'living area', 'lot area']].plot(kind='box', figsize=(10,5))
+plt.show()
+
+Command -k
+https://drive.google.com/file/d/1Jjs0Hw5lZAc8P-3frylQrwguaLgV6C3C/view?usp=drivesdk
