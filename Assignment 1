@@ -1,55 +1,1537 @@
 
-
-> **Data Visualization**
-
-
-
-import matplotlib.pyplot as plt
-import pandas as pd
-house_data = pd.read_csv("House Price India CSV format.csv")
-# print(house_data)
-
-
-
-> **Univariate**
-
-
-
-plt.hist(house_data['living area'], bins=50)
-plt.xlabel('Living Area')
-plt.ylabel('Frequency')
-plt.title('Distribution of Living Area')
-plt.show()
-
-print(house_data.describe())
-
-
-
-> **Bivaraiate**
-
-
-
-x = house_data['living area']
-y = house_data['Price']
-plt.xlabel('Living Area')
-plt.ylabel('Price')
-
-plt.title("Relationship between Living Area and Price")
-plt.scatter(x,y)
-plt.show()
-
-
-
-> **Multivariate**
-
-
-
-pd.plotting.scatter_matrix(house_data[['Price', 'living area', 'lot area']], figsize=(10,10))
-plt.show()
-
-# Create box plots for selected variables
-house_data[['Price', 'living area', 'lot area']].plot(kind='box', figsize=(10,5))
-plt.show()
-
-Command -k
-https://drive.google.com/file/d/1Jjs0Hw5lZAc8P-3frylQrwguaLgV6C3C/view?usp=drivesdk
+ 
+     
+from tkinter 
+import*import os 
+def marksheet (): 
+filename = 
+'College_Search_Page.py' 
+os.system(filename) 
+os.system('notepad'+filename) 
+def Library (): 
+ 
+filename = 'College_Library_Frontend.py' 
+os.system(filename) 
+os.system('notepad'+filename) 
+def information (): 
+ 
+filename = 'College_Std_info_FrontEnd.py' 
+os.system(filename) 
+os.system('notepad'+filename) 
+def FeeReport (): 
+ 
+filename = 'College_Fee_Frontend.py' 
+os.system(filename) 
+os.system('notepad'+filename) 
+def menu(): 
+ 
+root = Tk() 
+root.title('Menu') 
+root.geometry('1350x750') 
+root.config(bg = 'light blue') 
+18 
+ Menu_title_Frame = LabelFrame(root, font = ('arial',50,'bold'), width = 1000, height = 100, bg = 
+ 
+ 
+                         'light blue', relief = 'raise', bd = 13) 
+ 
+Menu_title_Frame.grid(row = 0, column = 0, pady = 50) 
+ 
+Menu_title_Label = Label(Menu_title_Frame, text = 'MENU', font = ('arial',30,'bold'), bg = 'light 
+blue') 
+Menu_title_Label.grid(row = 0, column = 0, padx = 150) 
+ 
+#========================================================FRAMES========= 
+========================================================== 
+ 
+Menu_Frame_1 = LabelFrame(root, font = ('arial',17,'bold'), width = 1000, height = 100, bg = 
+'light blue', relief = 'ridge', bd = 10) 
+ 
+                      Menu_Frame_1.grid(row = 1, column = 0, padx = 280) 
+ 
+Menu_Frame_2 = LabelFrame(root, font = ('arial',17,'bold'), width = 1000, height = 100, bg = 
+'light blue', relief = 'ridge', bd = 10) 
+Menu_Frame_2.grid(row = 2, column = 0, padx = 130, pady = 7) 
+ 
+Menu_Frame_3 = LabelFrame(root, font = ('arial',17,'bold'), width = 1000, height = 100, bg = 
+'light blue', relief = 'ridge', bd = 10) 
+Menu_Frame_3.grid(row = 3, column = 0, pady = 7) 
+ 
+Menu_Frame_4 = LabelFrame(root, font = ('arial',17,'bold'), width = 1000, height = 100, bg = 
+'light blue', relief = 'ridge', bd = 10) 
+Menu_Frame_4.grid(row = 4, column = 0, pady = 7) 
+ 
+ 
+#========================================================LABELS========= 
+========================================================== 
+ 
+Label_1_STUDENTINFO = Label(Menu_Frame_1, text = 'STUDENT PROFILE', font = 
+('arial',25,'bold'), bg = 'light blue') 
+Label_1_STUDENTINFO.grid(row = 0, column = 0, padx = 50, pady = 5) 
+Label_2_FEEREPORT = Label(Menu_Frame_2, text = 'FEE REPORT', font = ('arial',25,'bold'), 
+bg = 'light blue') 
+Label_2_FEEREPORT.grid(row = 0, column = 0, padx = 100, pady = 5) 
+Label_3_LIBRARYSYSTEM = Label(Menu_Frame_3, text = 'LIBRARY SYSTEM', font = 
+('arial',25,'bold'), bg = 'light blue') 
+19 
+ Label_3_LIBRARYSYSTEM.grid(row = 0, column = 0, padx = 60, pady = 5) 
+Label_4_MARKSHEET = Label(Menu_Frame_4, text = 'MARKSHEET', font = ('arial',25,'bold'), 
+bg = 'light blue') 
+ 
+Label_4_MARKSHEET.grid(row = 0, column = 0, padx = 101, pady = 5) 
+ 
+ 
+#========================================================BUTTONS======== 
+=========================================================== 
+ 
+Button_1_VIEWINFO = Button(Menu_Frame_1, text = 'VIEW', font = ('arial',16,'bold'), width = 
+8, command = information ) 
+ 
+ Button_1_VIEWINFO.grid(row = 0, column = 3, padx = 50) 
+ 
+Button_2_VIEWREPORT = Button(Menu_Frame_2, text = 'VIEW', font = ('arial',16,'bold'), 
+width = 8, command =     FeeReport ) 
+Button_2_VIEWREPORT.grid(row = 0, column = 3, padx = 50) 
+Button_3_VIEWLIBRARY = Button(Menu_Frame_3, text = 'VIEW', font = ('arial',16,'bold'), 
+width = 8, command = Library ) 
+Button_3_VIEWLIBRARY.grid(row = 0, column = 3, padx = 50) 
+Button_4_VIEWMARKSHEET = Button(Menu_Frame_4, text = 'VIEW', font = ('arial',16,'bold'), 
+width = 8, command =     marksheet ) 
+ 
+Button_4_VIEWMARKSHEET.grid(row = 0, column = 3, padx = 50) 
+root.mainloop() 
+if name == ' main ': 
+ 
+menu() 
+ 
+Student info front end 
+from tkinter import* 
+import tkinter.messagebox 
+import College_Std_info_BackEnd 
+ 
+from tkinter import ttk 
+ 
+class Student_Information(): 
+def init (self, master): 
+self.master = master 
+20 
+ self.master.title('Student Information') 
+self.master.geometry('1350x750') 
+self.master.config(bg = 'light blue') 
+def information(): 
+self.name = StringVar() 
+self.father_name = StringVar() 
+ self.mother_name = StringVar() self.address = StringVar() self.mobileno = StringVar() 
+self.email_address = StringVar() self.date_of_birth = StringVar() self.gender = StringVar() 
+def Student_Record(event): 
+ 
+try: 
+ 
+global selected_tuple 
+ 
+def Display(): 
+ 
+self.listbox.delete(0, END) 
+ 
+for row in College_Std_info_BackEnd.view(): 
+ 
+self.listbox.insert(END, row, str(' ')) 
+ 
+def Exit(): 
+ 
+Exit = tkinter.messagebox.askyesno("Login System", "Confirm if you want to Exit") 
+if Exit > 0: 
+self.master.destroy() 
+ 
+return 
+ 
+ 
+def Reset(): 
+ 
+self.name.set('') 
+self.father_name.set('') 
+self.mother_name.set('') 
+self.address.set('') 
+self.mobileno.set('') 
+self.email_address.set('') 
+self.date_of_birth.set('') 
+21 
+ self.gender.set('') 
+ 
+self.listbox.delete(0, END) 
+ 
+def Delete(): 
+ 
+if(len(self.name.get()) != 0): 
+College_Std_info_BackEnd.delete(selected_tuple[0]) 
+Reset() 
+Display() 
+ 
+def Search(): 
+ 
+self.listbox.delete(0, END) 
+ 
+ 
+ 
+self.Text_Entry_Father_Name = Entry(self.Student_Frame_1, font = ('arial', 17, 'bold'), 
+textvariable = self.father_name) 
+self.Text_Entry_Father_Name.grid(row = 1, column = 1, padx = 10, pady = 5) 
+self.Text_Entry_Mother_Name = Entry(self.Student_Frame_1, font = ('arial', 17, 'bold'), 
+textvariable = self.mother_name) 
+self.Text_Entry_Mother_Name.grid(row = 2, column = 1, padx = 10, pady = 5) 
+self.Text_Entry_address = Entry(self.Student_Frame_1, font = ('arial', 17, 'bold'), 
+textvariable = self.address) 
+self.Text_Entry_address.grid(row = 3, column = 1, padx = 10, pady = 5) 
+self.Text_Entry_mobileno = Entry(self.Student_Frame_1, font = ('arial', 17, 'bold'), 
+textvariable = self.mobileno) 
+self.Text_Entry_mobileno.grid(row = 4, column = 1, padx = 10, pady = 5) 
+self.Text_Entry_email_address = Entry(self.Student_Frame_1, font = ('arial', 17, 'bold'), 
+textvariable = self.email_address) 
+self.Text_Entry_email_address.grid(row = 5, column = 1, padx = 10, pady = 5) 
+self.Text_Entry_date_of_birth = Entry(self.Student_Frame_1, font = ('arial', 17, 'bold'), 
+textvariable = self.date_of_birth) 
+ 
+self.Text_Entry_date_of_birth.grid(row = 6, column = 1, padx = 10, pady = 5) 
+22 
+ self.Text_Entry_gender = ttk.Combobox(self.Student_Frame_1, values = (' ', 'Male', 
+'Female', 'Others'), \ 
+font = ('arial',17,'bold'), textvariable = self.gender, width = 19) 
+ 
+self.Text_Entry_gender.grid(row = 7, column = 1, padx = 10, pady = 5) 
+ 
+self.SAVE_BUTTON = Button(self.Student_Frame_3, text ='SAVE', font = ('arial', 17, 
+'bold'), width = 8, command = Add) 
+self.SAVE_BUTTON.grid(row = 0, column = 0, padx = 10, pady = 10) 
+self.BUTTON_DISPLAY = Button(self.Student_Frame_3, text ='DISPLAY', font = 
+('arial', 17, 'bold'), width = 8, command = Display) 
+self.BUTTON_DISPLAY.grid(row = 0, column = 1, padx = 10, pady = 10) 
+self.BUTTON_RESET = Button(self.Student_Frame_3, text ='RESET', font = ('arial', 17, 
+'bold'), width = 8, command = Reset) 
+self.BUTTON_RESET.grid(row = 0, column = 2, padx = 10, pady = 10) 
+self.BUTTON_UPDATE = Button(self.Student_Frame_3, text ='UPDATE', font = 
+('arial', 17, 'bold'), width = 8, command = Update) 
+self.BUTTON_UPDATE.grid(row = 0, column = 3, padx = 10, pady = 10) 
+self.BUTTON_DELETE = Button(self.Student_Frame_3, text ='DELETE', font = ('arial', 
+17, 'bold'), width = 8, command = Delete) 
+ 
+self.BUTTON_DELETE.grid(row = 0, column = 4, padx = 10, pady = 10) 
+ 
+self.BUTTON_SEARCH = Button(self.Student_Frame_3, text ='SEARCH', font = 
+('arial', 17, 'bold'), width = 8, command = Search) 
+self.BUTTON_SEARCH.grid(row = 0, column = 5, padx = 10, pady = 10) 
+self.BUTTON_EXIT = Button(self.Student_Frame_3, text ='EXIT', font = ('arial', 17, 
+'bold'), width = 8, command = Exit) 
+ 
+self.BUTTON_EXIT.grid(row = 0, column = 6, padx = 10, pady = 10) 
+self.scrollbar = Scrollbar(self.Student_Frame_2) 
+self.scrollbar.grid(row = 0, column = 1, sticky = 'ns') 
+self.listbox = Listbox(self.Student_Frame_2, width = 75, height = 20, font = ('arial', 12, 
+'bold')) 
+23 
+ self.listbox.bind('<<ListboxSelect>>', Student_Record) 
+self.listbox.grid(row = 0, column = 0) 
+self.scrollbar.config(command = self.listbox.yview) 
+information() 
+ 
+root = Tk() 
+ 
+obj = Student_Information(root) 
+ 
+root.mainloop() 
+ 
+Student info back end 
+import sqlite3 
+ 
+def connect(): 
+ 
+conn = sqlite3.connect("College_student.db") 
+ 
+cur = conn.cursor() 
+ 
+cur.execute("CREATE TABLE IF NOT EXISTS student (id INTEGER PRIMARY KEY, name text, 
+father_name text, mother_name text, \ 
+address text, mobileno integer,email_address text, date_of_birth integer, gender text)") 
+conn.commit() 
+conn.close() 
+ 
+def insert(name = " ", father_name =" ", mother_name =" ", address =" ", mobileno =" ", 
+email_address =" ", date_of_birth =" ", gender =" "): 
+conn = sqlite3.connect("College_student.db") 
+ 
+cur = conn.cursor() 
+ 
+cur.execute("INSERT INTO    student    VALUES (NULL,?,?,?,?,?,?,?,?)",    (name,    father_name, 
+mother_name, address , mobileno, email_address, date_of_birth, gender)) 
+ 
+conn.commit() 
+conn.close() 
+def view(): 
+conn = sqlite3.connect("College_student.db") 
+24 
+ cur = conn.cursor() 
+ 
+cur.execute("SELECT * FROM student") 
+rows = cur.fetchall() 
+return rows 
+ 
+conn.close() 
+def delete(id): 
+conn = sqlite3.connect("College_student.db") 
+ 
+cur = conn.cursor() 
+ 
+cur.execute("DELETE FROM student WHERE id = ?", (id,)) 
+conn.comit() 
+conn.close() 
+ 
+def update(id, name = " ", father_name =" ", mother_name =" ", address =" ", mobileno =" ", 
+email_address =" ", date_of_birth =" ", gender =" "): 
+conn = sqlite3.connect("College_student.db") 
+ 
+cur = conn.cursor() 
+ 
+cur.execute("UPDATE student SET name = ? OR father_name = ? OR mother_name = ? OR 
+address = ? OR mobileno = ? OR email_address = ? OR date_of_birth = ? OR gender = ?", \ 
+(name, father_name, mother_name, address , mobileno, email_address, date_of_birth, 
+gender)) 
+ 
+conn.commit() 
+ 
+conn.close() 
+ 
+def search(name = " ", father_name =" ", mother_name =" ", address =" ", mobileno =" ", 
+email_address =" ", date_of_birth =" ", gender =" "): 
+ 
+conn = sqlite3.connect("College_student.db") 
+ 
+cur = conn.cursor() 
+ 
+cur.execute("SELECT * FROM student WHERE name = ? OR father_name = ? OR mother_name 
+= ? OR address = ? OR mobileno = ? OR email_address = ? OR date_of_birth = ? \ 
+25 
+ OR gender = ?", (name, father_name, mother_name, address , mobileno, email_address, 
+date_of_birth, gender)) 
+rows = cur.fetchall() 
+ 
+return rows 
+ 
+conn.close() 
+ 
+connect() 
+ 
+ 
+ 
+ 
+ 
+ 
+Fees report front end 
+from   tkinter import* 
+from tkinter import ttk 
+import tkinter.messagebox 
+import datetime 
+import College_Fee_Backend 
+ 
+class college_fee(): 
+ 
+def init (self, master): 
+ 
+self.master = master 
+self.master.title('Fee Report') 
+self.master.geometry('1350x750') 
+self.master.config(bg='light blue') 
+self.receipts = StringVar() 
+self.name = StringVar() 
+self.admin =   StringVar() 
+self.date = StringVar() 
+self.branch = StringVar() 
+26 
+ self.semister = StringVar() 
+self.total = DoubleVar() 
+self.paid = DoubleVar() 
+self.due = DoubleVar() 
+def Tuple(event): 
+try: 
+ 
+global studentInfo 
+ 
+index = self.list.curselection()[0] 
+studentInfo = self.list.get(index) 
+self.receipts_entry.delete(0, END) 
+self.receipts_entry.insert(END, studentInfo[1]) 
+self.studentname_entry.delete(0, END) 
+self.studentname_entry.insert(END, studentInfo[2]) 
+self.collegeAdmin_entry.delete(0, END) 
+self.collegeAdmin_entry.insert(END, studentInfo[3]) 
+self.Date_entry.delete(0, END) 
+self.Date_entry.insert(END, studentInfo[4]) 
+self.collegeBranch_entry.delete(0, END) 
+self.collegeBranch_entry.insert(END, studentInfo[5]) 
+self.semister_entry.delete(0, END) 
+self.semister_entry.insert(END, studentInfo[6]) 
+self.tot_entry.delete(0, END) 
+self.tot_entry.insert(END, studentInfo[7]) 
+self.moneyPaid_entry.delete(0, END) 
+self.moneyPaid_entry.insert(END, studentInfo[8]) 
+self.studdenDdue_entry.delete(0, END) 
+27 
+ self.studdenDdue_entry.insert(END, studentInfo[9]) 
+ 
+except IndexError: 
+pass 
+def Insert(): 
+ 
+if (len(self.admin.get()) != 0): 
+ 
+College_Fee_Backend.insert(self.receipts.get(), self.name.get(), self.admin.get(), 
+self.date.get(), 
+ 
+self.branch.get(), self.semister.get(), self.total.get(), self.paid.get(), 
+ 
+self.due.get()) 
+self.list.delete(0, END) 
+self.list.insert(END, (self.receipts.get(), self.name.get(), self.admin.get(), self.date.get(), 
+self.branch.get(), self.semister.get(), self.total.get(), self.paid.get(), 
+self.due.get())) 
+def View(): 
+ 
+self.list.delete(0, END) 
+ 
+for row in College_Fee_Backend.view(): 
+ 
+self.list.insert(END, row, str(' ')) 
+def Reset(): 
+self.receipts.set(' ') 
+ 
+self.name.set(' ') 
+ 
+self.admin.set(' ') 
+ 
+#self.date.set(' ') 
+ 
+self.branch.set(' ') 
+self.semister.set(' ') 
+self.paid.set(' ') 
+self.due.set(' ') 
+28 
+ self.Display.delete('1.0', END) 
+ 
+self.list.delete(0, END) 
+def Delete(): 
+College_Fee_Backend.delete(studentInfo[0]) 
+ 
+Reset() 
+View() 
+def Update(): 
+ 
+College_Fee_Backend.delete(studentInfo[0]) 
+ 
+Insert() 
+def Exit(): 
+Exit = tkinter.messagebox.askyesno( 
+'Attention', 'Confirm, if you want to Exit') 
+if Exit > 0: 
+root.destroy() 
+return 
+College_Main_Frame = Frame(self.master, bg='light blue') 
+ 
+College_Main_Frame.grid() 
+College_Title_Frame = LabelFrame( 
+College_Main_Frame, width=1350, height=100, bg='light blue', relief='ridge', bd=15) 
+College_Title_Frame.pack(side=TOP) 
+self.lblTitle = Label(College_Title_Frame, font=('arial', 40, 'bold'), text='FEE REPORT', 
+ 
+bg='light blue', padx=13) 
+self.lblTitle.grid(padx=400) 
+College_Data_Frame = Frame(College_Main_Frame, width=1350, height=350, 
+bg='light blue', relief='ridge', bd=15) 
+College_Data_Frame.pack(side=TOP, padx=15) 
+29 
+ College_Frame_1 = LabelFrame(College_Data_Frame, width=850, height=350, bg='light blue', 
+relief='ridge', bd=8, 
+ 
+text='Informations', font=('arial', 15, 'bold')) 
+College_Frame_1.pack(side=LEFT, padx=10) 
+College_Frame_2 = LabelFrame(College_Data_Frame, width=495, height=350, bg='light blue', 
+relief='ridge', bd=8, 
+ 
+text='Fee Receipt', font=('arial', 15, 'bold')) 
+College_Frame_2.pack(side=RIGHT, padx=10) 
+College_List_Frame = Frame(College_Main_Frame, width=1350, height=150, 
+ 
+bg='light blue', relief='ridge', bd=15) 
+ 
+College_List_Frame.pack(side=TOP, padx=15) 
+ 
+Btn_Frame = Frame(College_Main_Frame, width=1350, height=80, 
+ 
+bg='light blue', relief='ridge', bd=15) 
+Btn_Frame.pack(side=TOP) 
+self.receipts_lbl = Label(College_Frame_1, text='Receipt No. : ', font=( 
+ 
+'arial', 14, 'bold'), bg='light blue') 
+ 
+self.receipts_lbl.grid(row=0, column=0, padx=15, sticky=W) 
+ 
+ 
+self.studentName_lbl = Label(College_Frame_1, text='Student Name : ', font=( 
+ 
+'arial', 14, 'bold'), bg='light blue') 
+self.studentName_lbl.grid(row=1, column=0, padx=15, sticky=W) 
+self.collegeAdmin_lbl = Label(College_Frame_1, text='Admission No. : ', font=( 
+'arial', 14, 'bold'), bg='light blue') 
+self.collegeAdmin_lbl.grid(row=2, column=0, padx=15, sticky=W) 
+ 
+self.Date_lbl = Label(College_Frame_1, text='Date : ', font=( 
+'arial', 14, 'bold'), bg='light blue') 
+self.Date_lbl.grid(row=3, column=0, padx=15, sticky=W) 
+30 
+ self.college_branch_lbl = Label(College_Frame_1, text='Branch : ', font=( 
+ 
+'arial', 14, 'bold'), bg='light blue') 
+self.college_branch_lbl.grid(row=4, column=0, padx=15, sticky=W) 
+self.semister_lbl = Label(College_Frame_1, text='Semester : ', font=( 
+'arial', 14, 'bold'), bg='light blue') 
+ 
+self.semister_lbl.grid(row=5, column=0, padx=15, sticky=W) 
+ 
+self.total_lbl = Label(College_Frame_1, text='TOTAL AMOUNT : ', font=( 
+'arial', 14, 'bold'), bg='light blue') 
+self.total_lbl.grid(row=2, column=2, padx=5, sticky=W) 
+ 
+self.paid_lbl = Label(College_Frame_1, text='PAID AMOUNT : ', font=( 
+'arial', 14, 'bold'), bg='light blue') 
+'arial', 14), width=10, textvariable=self.var_1, state='readonly') 
+self.tot_entry.grid(row=2, column=3, padx=8, pady=5) 
+self.moneyPaid_entry = Entry(College_Frame_1, font=( 
+'arial', 14), width=10, textvariable=self.paid) 
+self.moneyPaid_entry.grid(row=3, column=3, pady=5) 
+self.studdenDdue_entry = Entry(College_Frame_1, font=( 
+'arial', 14), width=10, textvariable=self.due) 
+self.studdenDdue_entry.grid(row=4, column=3, pady=7) 
+self.Display = Text(College_Frame_2, width=42, height=12, 
+font=('arial', 14, 'bold')) 
+self.Display.grid(row=0, column=0, padx=3) 
+sb = Scrollbar(College_List_Frame) 
+sb.grid(row=0, column=1,    sticky='ns') 
+self.list = Listbox(College_List_Frame, font=( 
+'arial', 13, 'bold'), width=140, height=8) 
+31 
+ self.list.bind('<<ListboxSelect>>', Tuple) 
+self.list.grid(row=0, column=0) 
+sb.config(command=self.list.yview) 
+button_Save = Button(Btn_Frame, text='SAVE', font=( 
+ 
+'arial', 14, 'bold'), width=10, command=Insert) 
+button_Save.grid(row=0, column=0, padx=5, pady=5) 
+button_display = Button(Btn_Frame, text='DISPLAY', font=( 
+'arial', 14, 'bold'), width=10, command=View) 
+button_display.grid(row=0, column=1, padx=5, pady=5) 
+button_Reset = Button(Btn_Frame, text='RESET', font=( 
+'arial', 14, 'bold'), width=10, command=Reset) 
+button_Reset.grid(row=0, column=2, padx=5, pady=5) 
+button_Reset = Button(Btn_Frame, text='UPDATE', font=( 
+'arial', 14, 'bold'), width=10, command=Update) 
+button_Reset.grid(row=0, column=3, padx=5, pady=5) 
+button_Search = Button(Btn_Frame, text='SEARCH', font=( 
+'arial', 14, 'bold'), width=10, command=Search) 
+button_Search.grid(row=0, column=4, padx=5, pady=5) 
+button_Delete = Button(Btn_Frame, text='DELETE', font=( 
+'arial', 14, 'bold'), width=10, command=Delete) 
+button_Delete.grid(row=0, column=5, padx=5, pady=5) 
+ 
+ 
+button_Receipt = Button(Btn_Frame, text='RECEIPT', font=( 
+ 
+'arial', 14, 'bold'), width=10, command=Receipt) 
+button_Receipt.grid(row=0, column=6, padx=5, pady=5) 
+button_Exit = Button(Btn_Frame, text='EXIT', font=( 
+32 
+ 'arial', 14, 'bold'), width=10, command=Exit) 
+ 
+button_Exit.grid(row=0, column=7, padx=5, pady=5) 
+ 
+root = Tk() 
+ 
+obj = college_fee(root) 
+root.mainloop() 
+Fees report back end 
+import sqlite3 
+ 
+def connect(): 
+ 
+con = sqlite3.connect('College_fee.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('CREATE TABLE IF NOT EXISTS fee(id INTEGER PRIMARY KEY, receipts 
+integer, name text, admin text, date integer, \ 
+branch text, semister text, total integer, paid integer, due integer)') 
+ 
+con.commit() 
+con.close() 
+def insert(receipts =' ', name =' ', admin =' ', date =' ', branch =' ', semister =' ', total =' ', paid =' ', due =' 
+'): 
+con = sqlite3.connect('College_fee.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('INSERT INTO fee VALUES (NULL,?,?,?,?,?,?,?,?,?)', (receipts, name, admin, date, 
+branch, semister, total, paid, due)) 
+con.commit() 
+ 
+con.close() 
+def view(): 
+con = sqlite3.connect('College_fee.db') 
+cur = con.cursor() 
+cur.execute('SELECT * FROM fee') 
+33 
+ row = cur.fetchall() 
+return row 
+con.commit() 
+def delete(id): 
+ 
+con = sqlite3.connect('College_fee.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('DELETE FROM fee WHERE id = ?',(id,)) 
+con.commit() 
+con.close() 
+ 
+def update(id, receipts =' ', name =' ', admin =' ', date =' ', branch =' ', semister =' ', total =' ', paid =' ', 
+due =' '): 
+con = sqlite3.connect('College_fee.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('UPDATE fee SET receipts = ? OR name = ? OR admin = ? OR date = ? OR branch = 
+? OR semister = ? OR total = ? OR \ 
+ 
+paid = ? OR due = ?', (receipts, name, admin, date, branch, semister, total, paid, due)) 
+ 
+con.commit() 
+con.close() 
+def search(receipts =' ', name =' ', admin =' ', date =' ', branch =' ', semister =' ', total =' ', paid =' ', due =' 
+'): 
+con = sqlite3.connect('College_fee.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('SELECT * FROM fee WHERE receipts = ? OR name = ? OR admin = ? OR date = ? 
+OR branch = ? OR semister = ? OR \ 
+ 
+total = ? OR paid = ? OR due = ?', (receipts, name, admin, date, branch, semister, total, 
+paid, due)) 
+ 
+row = cur.fetchall() 
+ 
+return row 
+34 
+ con.commit() 
+ 
+connect() 
+ 
+Liabray system front end 
+from tkinter import* 
+from tkinter import ttk 
+import random 
+from datetime import datetime 
+import tkinter.messagebox 
+import College_Library_Backend 
+class Library: 
+def init (self, root): 
+ 
+ 
+self.root = root 
+ 
+self.root.title('Library Management System') 
+self.root.geometry('1350x750') 
+self.root.config(bg = 'light blue') 
+self.Mbtype = StringVar() 
+self.referenceno = StringVar() 
+self.firstname = StringVar() 
+self.lastname = StringVar() 
+self.address = StringVar() 
+self.post = StringVar() 
+self.mobileno = StringVar() 
+self.ID =   StringVar() 
+self.title = StringVar() 
+self.author = StringVar() 
+35 
+ self.borrow = StringVar() 
+self.due = StringVar() 
+self.loan = StringVar() 
+self.yr_of_pub = StringVar() 
+self.editions = StringVar() 
+index = self.List_bx_2.curselection()[0] 
+ 
+selected_tuple = self.List_bx_2.get(index) 
+ 
+ 
+self.txt_Entry_0.delete(0, END) 
+self.txt_Entry_0.insert(END, selected_tuple[1]) 
+self.txt_Entry_1.delete(0, END) 
+self.txt_Entry_1.insert(END, selected_tuple[2]) 
+self.txt_Entry_2.delete(0, END) 
+self.txt_Entry_2.insert(END, selected_tuple[3]) 
+self.txt_Entry_3.delete(0, END) 
+self.txt_Entry_3.insert(END, selected_tuple[4]) 
+self.txt_Entry_4.delete(0, END) 
+self.txt_Entry_4.insert(END, selected_tuple[5]) 
+self.txt_Entry_5.delete(0, END) 
+self.txt_Entry_5.insert(END, selected_tuple[6]) 
+self.txt_Entry_6.delete(0, END) 
+self.txt_Entry_6.insert(END, selected_tuple[7]) 
+self.txt_Entry_7.delete(0, END) 
+self.txt_Entry_7.insert(END, selected_tuple[8]) 
+self.txt_Entry_8.delete(0, END) 
+self.txt_Entry_8.insert(END, selected_tuple[9]) 
+36 
+ self.txt_Entry_9.delete(0, END) 
+self.txt_Entry_9.insert(END, selected_tuple[10]) 
+self.txt_Entry_10.delete(0, END) 
+self.txt_Entry_10.insert(END, selected_tuple[11]) 
+self.txt_Entry_11.delete(0, END) 
+self.txt_Entry_11.insert(END, selected_tuple[12]) 
+self.txt_Entry_12.delete(0, END) 
+self.txt_Entry_12.insert(END, selected_tuple[13]) 
+except IndexError: 
+ 
+pass 
+def Insert(): 
+if(len(self.referenceno.get()) != 0): 
+ 
+College_Library_Backend.insert(self.Mbtype.get(), self.referenceno.get(), 
+self.firstname.get(), self.lastname.get() \ 
+ 
+, self.address.get(), self.post.get(), self.mobileno.get(), 
+self.ID.get() \ 
+ 
+, self.title.get(), self.author.get(), self.borrow.get(), self.due.get() \ 
+ 
+, self.loan.get()) 
+ 
+self.List_bx_2.delete(0, END) 
+ 
+self.List_bx_2.insert(END, (self.Mbtype.get(), self.referenceno.get(), 
+self.firstname.get(), self.lastname.get()\ 
+, self.address.get(), self.post.get(), self.mobileno.get(), 
+self.ID.get()\ 
+ 
+, self.title.get(), self.author.get(), self.borrow.get(), self.due.get()\ 
+ 
+, self.loan.get())) 
+ 
+ 
+ 
+def Display(): 
+37 
+ self.List_bx_2.delete(0, END) 
+ 
+for row in College_Library_Backend.view(): 
+self.List_bx_2.insert(END, row, str(' ')) 
+def Exit(): 
+ 
+ 
+Exit = tkinter.messagebox.askyesno('Library Management System','Confirm if you want 
+ 
+to Exit') 
+ 
+if Exit > 0: 
+ 
+root.destroy() 
+ 
+return 
+def Reset(): 
+self.Mbtype.set('') 
+self.referenceno.set('') 
+self.firstname.set('') 
+self.lastname.set('') 
+self.address.set('') 
+self.post.set('') 
+self.mobileno.set('') 
+self.ID.set('') 
+self.title.set('') 
+ 
+self.author.set('') 
+ 
+self.borrow.set('') 
+ 
+self.due.set('') 
+ 
+self.loan.set('') 
+self.Display_Layout.delete('1.0', END) 
+self.List_bx_2.delete(0, END) 
+def Delete(): 
+38 
+ College_Library_Backend.delete(selected_tuple[0]) 
+ 
+Reset() 
+Display() 
+bg = 'light blue') 
+ 
+self.memLabel_1.grid(row = 0, column = 0, sticky = W) 
+ 
+self.refLabel_2 = Label(Library_Frame_1, text ='Reference No.', font = ('arial', 13, 'bold'), 
+pady = 2, \ 
+ 
+bg = 'light blue') 
+ 
+self.refLabel_2.grid(row = 1, column = 0, sticky = W) 
+ 
+self.firstnameLabel_3 = Label(Library_Frame_1, text ='First Name', font = ('arial', 13, 'bold'), 
+pady = 2, \ 
+bg = 'light blue') 
+ 
+self.firstnameLabel_3.grid(row = 2, column = 0, sticky = W) 
+ 
+self.lastnameLabel_4 = Label(Library_Frame_1, text ='Last Name', font = ('arial', 13, 'bold'), 
+pady = 2, \ 
+bg = 'light blue') 
+ 
+self.lastnameLabel_4.grid(row = 3, column = 0, sticky = W) 
+ 
+self.addressLabel_5 = Label(Library_Frame_1, text ='Address', font = ('arial', 13, 'bold'), pady 
+ 
+ 
+= 2, \ 
+ 
+bg = 'light blue') 
+ 
+self.addressLabel_5.grid(row = 4, column = 0, sticky = W) 
+ 
+self.postcodeLabel_6 = Label(Library_Frame_1, text ='Post Code', font = ('arial', 13, 'bold'), 
+pady = 2, \ 
+bg = 'light blue') 
+ 
+self.postcodeLabel_6.grid(row = 5, column = 0, sticky = W) 
+ 
+self.mobilenoLabel_7 = Label(Library_Frame_1, text ='Mobile No.', font = ('arial', 13, 'bold'), 
+pady = 2, \ 
+bg = 'light blue') 
+39 
+ self.mobilenoLabel_7.grid(row = 6, column = 0, sticky = W) 
+ 
+ 
+self.bookidLabel_8 = Label(Library_Frame_1, text ='Book ID', font = ('arial', 13, 'bold'), pady 
+ 
+= 2, \ 
+ 
+bg = 'light blue') 
+ 
+self.bookidLabel_8.grid(row = 0, column = 2, sticky = W) 
+ 
+self.booktitleLabel_9 = Label(Library_Frame_1, text ='Book Title', font = ('arial', 13, 'bold'), 
+pady = 2, \ 
+ 
+bg = 'light blue') 
+ 
+self.booktitleLabel_9.grid(row = 1, column = 2, sticky = W) 
+self.ID.set('ISBN 649635') 
+self.title.set('My SQL Programming') 
+self.author.set('Adones Evangelista') 
+self.yr_of_pub.set('2019') 
+self.editions.set('3rd') 
+import datetime 
+ 
+days1 = datetime.date.today() 
+ 
+days2 = datetime.timedelta(days = 20) 
+days3 = (days1 + days2) 
+self.borrow.set(days1) 
+self.loan.set('20') 
+self.due.set(days3) 
+ 
+Details() 
+ 
+elif (val == ' Data Structure'): 
+ 
+self.ID.set('ISBN 531588') 
+ 
+self.title.set('Data Structure') 
+self.author.set('Jennifer Juaniza') 
+self.yr_of_pub.set('2019') 
+40 
+ self.editions.set('5th') 
+ 
+import datetime 
+ 
+days1 = datetime.date.today() 
+ 
+days2 = datetime.timedelta(days = 11) 
+days3 = (days1 + days2) 
+self.borrow.set(days1) 
+self.loan.set('11') 
+self.due.set(days3) 
+Details() 
+self.ID.set('ISBN 535674') 
+self.title.set('Basics of Algorithm ') 
+self.author.set('Paul Angelo Niar') 
+self.yr_of_pub.set('2019') 
+self.editions.set('7th') 
+import datetime 
+ 
+days1 = datetime.date.today() 
+ 
+days2 = datetime.timedelta(days = 10) 
+days3 = (days1 + days2) 
+self.borrow.set(days1) 
+self.loan.set('10') 
+self.due.set(days3) 
+ 
+Details() 
+ 
+elif (val == ' Android'): 
+ 
+self.ID.set('ISBN 356452') 
+ 
+self.title.set('Android Programming') 
+ 
+self.author.set('Jomhel Dulla') 
+41 
+ self.yr_of_pub.set('2019') 
+self.editions.set('4th') 
+import datetime 
+days1 = datetime.date.today() 
+ 
+days2 = datetime.timedelta(days = 9) 
+days3 = (days1 + days2) 
+self.borrow.set(days1) 
+self.loan.set('9') 
+self.due.set(days3) 
+ 
+Details() 
+ 
+sroll_b_1 = Scrollbar(Library_Frame_2) 
+ 
+sroll_b_1.grid(row =0, column = 1, sticky = 'ns') 
+ 
+ 
+self.List_bx_1 = Listbox(Library_Frame_2, font = ('arial', 13, 'bold'), width = 20, height = 10) 
+ 
+self.List_bx_1.bind('<<ListboxSelect>>', SelectedBook) 
+self.List_bx_1.grid(row = 0, column = 0) 
+sroll_b_1.config(command = self.List_bx_1.yview 
+scroll_b_2 = Scrollbar(Library_Detail_Frame) 
+scroll_b_2.grid(row = 1, column = 1, sticky = 'ns') 
+self.List_bx_2 = Listbox(Library_Detail_Frame, font = ('arial', 13, 'bold'), width = 144, height = 11) 
+self.List_bx_2.bind('<<ListboxSelect>>', BookRec) 
+self.List_bx_2.grid(row = 1, column = 0) 
+scroll_b_2.config(command = self.List_bx_2.yview) 
+for items in List_of_Books: 
+self.List_bx_1.insert(END, items) 
+42 
+ btnsave_1 = Button(btn_Frame, text = 'SAVE', font = ('arial',15,'bold'), width = 10, command = 
+Insert) 
+btnsave_1.grid(row = 0, column = 0, padx = 8, pady = 5) 
+ 
+btndisplay_2 = Button(btn_Frame, text = 'DISPLAY', font = ('arial',15,'bold'), width = 10, 
+command = Display) 
+btndisplay_2.grid(row = 0, column = 1, padx = 8) 
+ 
+btnreset_3 = Button(btn_Frame, text = 'RESET', font = ('arial',15,'bold'), width = 10, 
+command = Reset) 
+btnreset_3.grid(row = 0, column = 2, padx = 8) 
+ 
+btnupdate_4 = Button(btn_Frame, text = 'UPDATE', font = ('arial',15,'bold'), width = 10, 
+command = Update) 
+ 
+btnupdate_4.grid(row = 0, column = 3, padx = 8) 
+ 
+btnsearch_5 = Button(btn_Frame, text = 'SEARCH', font = ('arial',15,'bold'), width = 10, 
+command = Search) 
+btnsearch_5.grid(row = 0, column = 4, padx = 8) 
+ 
+btndelete_6 = Button(btn_Frame, text = 'DELETE', font = ('arial',15,'bold'), width = 10, 
+command = Delete) 
+btndelete_6.grid(row = 0, column = 5, padx = 8) 
+ 
+btnexit_7 = Button(btn_Frame, text = 'EXIT', font = ('arial',15,'bold'), width = 10, command = 
+Exit) 
+ 
+btnexit_7.grid(row = 0, column = 6, padx = 8) 
+ 
+ 
+#=============================================================treeview===== 
+========= 
+ 
+if name == ' main ': 
+  
+ 
+root = Tk() 
+ 
+applicaton = Library(root) 
+ 
+root.mainloop() 
+43 
+  
+Library system Back end 
+import sqlite3 
+ 
+def connect(): 
+ 
+con = sqlite3.connect('College_library.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('CREATE TABLE IF NOT EXISTS library(x INTEGER PRIMARY KEY, Mbtype 
+text, referenceno integer, firstname text, \ 
+lastname text, address text, post integer, mobileno integer, ID text, title text, author text, \ 
+borrow integer, due integer, loan integer)') 
+con.commit() 
+ 
+con.close() 
+ 
+def insert(Mbtype =' ', referenceno =' ', firstname =' ', lastname =' ', address =' ', post =' ', mobileno =' ', 
+ID =' ', \ 
+ 
+title = ' ', author = ' ', borrow = ' ', due = ' ', loan = ' '): 
+con = sqlite3.connect('College_library.db') 
+cur = con.cursor() 
+ 
+cur.execute('INSERT INTO library VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?)', (Mbtype, 
+referenceno, firstname, lastname, address, post, \ 
+ 
+mobileno, ID, title, author, borrow, due, loan)) 
+ 
+con.commit() 
+ 
+con.close() 
+def view(): 
+con = sqlite3.connect('College_library.db') 
+ 
+cur =  con.cursor() 
+cur.execute('SELECT * FROM library') 
+row = cur.fetchall() 
+44 
+ return row 
+ 
+con.close() 
+ 
+def delete(x): 
+ 
+con = sqlite3.connect('College_library.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('DELETE FROM library WHERE x = ?',(x,)) 
+ 
+con.commit() 
+con.close() 
+def update(x, Mbtype =' ', referenceno =' ', firstname =' ', lastname =' ', address =' ', post =' ', mobileno 
+=' ', ID =' ', \ 
+ 
+title = ' ', author = ' ', borrow = ' ', due = ' ', loan = ' '): 
+con = sqlite3.connect('College_library.db') 
+cur = con.cursor() 
+ 
+cur.execute('UPDATE library SET Mbtype = ? OR referenceno = ? OR firstname = ? OR 
+lastname = ? OR address = ? OR post = ? OR \ 
+mobileno = ? OR ID = ? OR title = ? OR author = ? OR borrow = ? OR due = ? OR loan = ?', 
+(Mbtype, referenceno, firstname, lastname, address, \ 
+post, mobileno, ID, title, author, borrow, 
+due, loan)) 
+ 
+con.commit() 
+ 
+con.close() 
+ 
+def search(Mbtype =' ', referenceno =' ', firstname =' ', lastname =' ', address =' ', post =' ', mobileno =' ', 
+ID =' ', \ 
+ 
+title = ' ', author = ' ', borrow = ' ', due = ' ', loan = ' '): 
+con = sqlite3.connect('College_library.db') 
+cur = con.cursor() 
+ 
+cur.execute('SELECT * FROM library WHERE Mbtype = ? OR referenceno = ? OR firstname = ? 
+OR lastname = ? OR address = ? OR \ 
+45 
+ post = ? OR mobileno = ? OR ID = ? OR title = ? OR author = ? OR borrow = ? OR due = ? OR 
+loan = ?',(Mbtype, referenceno, \ 
+firstname, lastname, \ 
+address, post, mobileno, \ 
+ID, title, author, \ 
+borrow, due, loan)) 
+row = cur.fetchall() 
+return row 
+con.close() 
+connect() 
+ 
+Search menu 
+ 
+from tkinter import * 
+import random 
+import College_Marksheet_Backend 
+import College_Marksheet_Frontend 
+import tkinter.messagebox 
+import os 
+ 
+class Window_1(): 
+ 
+def init (self, master): 
+ 
+self.master = master 
+self.master.title('Search Page') 
+self.master.geometry('1360x750') 
+self.master.config(bg = 'light blue') 
+self.roll = StringVar() 
+search_frame = LabelFrame(self.master, width = 1000, height = 100, font = ('arial',30,'bold'), 
+relief = 'ridge', bd = 15, bg = 'wheat') 
+46 
+ search_frame.grid(row = 1, column = 0, padx = 200, pady = 200) 
+ 
+lbl_enterrollnumber = Label(search_frame, text = 'Enter Roll Number', font = 
+('arial',25,'bold'), bg = 'wheat' ) 
+lbl_enterrollnumber.grid(row = 0, column = 0, padx = 100, pady = 10) 
+txtsearch_entry = Entry(search_frame, font = ('arial',25,'bold'), textvariable = self.roll) 
+txtsearch_entry.grid(row = 0, column = 1, padx = 30, pady = 20) 
+def Search(): 
+ 
+if(len(self.roll.get()) != 0): 
+ 
+row = College_Marksheet_Backend.search(int(self.roll.get())) 
+print(row) 
+College_Marksheet_Frontend.search_result_marksheet(row) 
+else: 
+ 
+tkinter.messagebox.askokcancel('Attention','Please enter valid Roll No.') 
+ 
+return 
+def new(): 
+filename = 'College_Marksheet_Frontend.py' 
+os.system(filename) 
+os.system('notepad'+filename) 
+button_search = Button(search_frame, text = 'SEARCH', width = 15, font = ('arial',15,'bold'), 
+command=Search) 
+button_search.grid(row = 1, column = 0, padx = 50) 
+ 
+buttone_new = Button(search_frame, text = 'CREATE NEW', width = 15, font = 
+('arial',15,'bold'), command=new) 
+buttone_new.grid(row = 1, column = 1, padx = 50, pady = 20 ) 
+ 
+root = Tk() 
+root.title("Login Form") 
+Window_1(root) 
+47 
+ root.mainloop() 
+ 
+Marksheet front end 
+from tkinter import * 
+import random 
+import College_Marksheet_Backend 
+ 
+import tkinter.messagebox 
+from tkinter import ttk 
+def marking_sheet(): 
+root = Tk() 
+root.title('Marksheet') 
+root.geometry('1350x750') 
+root.config(bg = 'light blue') 
+name = StringVar() 
+ 
+roll = StringVar() 
+father_name = StringVar() 
+mother_name = StringVar() 
+date_of_birth = StringVar() 
+gender =   StringVar() 
+school = StringVar() 
+email_address = StringVar() 
+marks1 = DoubleVar() 
+marks2 = DoubleVar() 
+marks3 = DoubleVar() 
+marks4 = DoubleVar() 
+marks5 = DoubleVar() 
+48 
+ grand_tot = DoubleVar() 
+percentage = DoubleVar() 
+cgpa =   DoubleVar() 
+grade = StringVar() 
+division = StringVar() 
+result = StringVar() 
+def Add(): 
+ 
+if (len(roll.get()) != 0): 
+ 
+College_Marksheet_Backend.insert(name.get(), roll.get(), father_name.get(), 
+mother_name.get(), date_of_birth.get(), gender.get(), \ 
+ 
+school.get(), email_address.get(), marks1.get(), marks2.get(), 
+marks3.get(), marks4.get(), marks5.get(), \ 
+grand_tot.get(), percentage.get(), cgpa.get(), grade.get(), 
+division.get(), result.get()) 
+def Update(): 
+if (len(roll.get()) != 0): 
+ 
+College_Marksheet_Backend.update(name.get(), roll.get(), father_name.get(), 
+mother_name.get(), date_of_birth.get(), gender.get(), \ 
+ 
+school.get(), email_address.get(), marks1.get(), marks2.get(), 
+marks3.get(), marks4.get(), marks5.get(), \ 
+grand_tot.get(), percentage.get(), cgpa.get(), grade.get(), 
+division.get(), result.get()) 
+def Exit(): 
+Exit = tkinter.messagebox.askyesno('Marksheet','Confirm if you want to Exit') 
+ 
+if Exit > 0: 
+ 
+root.destroy() 
+ 
+return 
+ 
+def Compute(): 
+49 
+ num1 = (marks1.get()); num2 = (marks2.get()); num3 = (marks3.get()); num4 = 
+(marks4.get()); num5 = (marks5.get()) 
+if num1 > 100: 
+ 
+tkinter.messagebox.askokcancel('Attention','Please enter Correct Marks') 
+ 
+return 
+ 
+if num2 > 100: 
+ 
+tkinter.messagebox.askokcancel('Attention','Please enter Correct Marks') 
+ 
+return 
+ 
+if num3 > 100: 
+ 
+tkinter.messagebox.askokcancel('Attention','Please enter Correct Marks') 
+ 
+return 
+ 
+if num4 > 100: 
+ 
+tkinter.messagebox.askokcancel('Attention','Please enter Correct Marks') 
+ 
+return 
+ 
+if num5 > 100: 
+ 
+tkinter.messagebox.askokcancel('Attention','Please enter Correct Marks') 
+ 
+return 
+ 
+TOTAL = num1+num2+num3+num4+num5 
+ 
+grand_tot.set(TOTAL) 
+ 
+Percentage = ((num1 + num2 + num3 + num4 + num5) * 100) / 500 
+percentage.set(Percentage) 
+c_grades = (((num1+num2+num3+num4+num5) * 100)/500) / 9.5 
+cgpa.set(round(c_grades,1)) 
+if c_grades > 10: 
+cgpa.set(10) 
+if (((num1+num2+num3+num4+num5) * 100)/500) <= 40: 
+50 
+ grades = 'G' 
+ 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 50: 
+grades = 'F' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 60: 
+grades = 'E' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 70: 
+grades = 'D' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 80: 
+grades = 'C' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 90: 
+grades = 'B' 
+else: 
+ 
+grades = 'A' 
+grade.set(grades) 
+count = 0 
+if num1 < 35: 
+ 
+count = count + 1 
+if num2 < 35: 
+count = count + 1 
+if num3 < 35: 
+count = count + 1 
+if num4 < 35: 
+count = count + 1 
+if num5 < 35: 
+count = count + 1 
+if (count == 0): 
+51 
+ result.set('PASS') 
+ 
+elif (count == 1 or count == 2 ): 
+result.set('SUPPLY') 
+else: 
+ 
+result.set('FAIL') 
+ 
+if Percentage <= 45 and result != "FAIL": 
+ 
+division.set('THIRD') 
+ 
+elif Percentage <= 60 and result != "FAIL": 
+ 
+division.set('SECOND') 
+elif Percentage <= 100: 
+division.set('FIRST') 
+ 
+def Reset(): 
+ 
+name.set(' ') 
+ 
+roll.set(' ') 
+father_name.set(' ') 
+mother_name.set(' ') 
+date_of_birth.set(' ') 
+gender.set(' ') 
+school.set(' ') 
+email_address.set(' ') 
+marks1.set(' ') 
+marks2.set(' ') 
+ 
+marks3.set(' ') 
+ 
+marks4.set(' ') 
+ 
+marks5.set(' ') 
+ 
+grand_tot.set(' ') 
+52 
+ percentage.set(' ') 
+ 
+cgpa.set(' ') 
+ 
+grade.set(' ') 
+ 
+division.set(' ') 
+ 
+result.set(' ') 
+ 
+ 
+#========================================================Marks_Frame_1==== 
+=========================================================== 
+ 
+Marks_Frame_1 = LabelFrame(root, width = 1200, height = 400, font = ('arial',20,'bold'), bg = 
+'light blue', bd = 10, \ 
+text = 'Student Details', relief = 'ridge') 
+ 
+Marks_Frame_1.grid(row = 1, column = 0, pady = 20, padx = 20) 
+ 
+Name_lbl = Label(Marks_Frame_1, text = 'Name', font = ('arial',15,'bold'), bg = 'light blue') 
+ 
+Name_lbl.grid(row = 0, column = 0, padx = 80) 
+ 
+Name_TxtEntry = Entry(Marks_Frame_1, font = ('arial',15), width = 25, textvariable = name) 
+Name_TxtEntry.grid(row = 0, column = 1, padx = 5, pady = 5) 
+RollNumber_lbl = Label(Marks_Frame_1, text = 'Roll Number', font = ('arial',15,'bold'), bg = 
+'light blue') 
+RollNumber_lbl.grid(row = 0, column = 3, padx = 80) 
+ 
+GRAND_TOTAL_lbl6 = Label(Marks_Frame_2, text = 'GRAND TOTAL', font = ('arial',16), bg 
+= 'light blue') 
+ 
+root.title('Marksheet') 
+root.geometry('1350x750') 
+root.config(bg = 'light blue') 
+def Compute(): 
+ 
+num1 = (marks1.get()); num2 = (marks2.get()); num3 = (marks3.get()); num4 = 
+(marks4.get()); num5 = (marks5.get()) 
+TOTAL = num1+num2+num3+num4+num5 
+53 
+ grand_tot.set(TOTAL) 
+ 
+Percentage = ((num1+num2+num3+num4+num5) * 100)/500 
+percentage.set(Percentage) 
+c_grades = (((num1+num2+num3+num4+num5) * 100)/500) / 9.5 
+cgpa.set(round(c_grades,1)) 
+if (((num1+num2+num3+num4+num5) * 100)/500) <= 40: 
+ 
+grades = 'G' 
+ 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 50: 
+grades = 'F' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 60: 
+grades = 'E' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 70: 
+grades = 'D' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 80: 
+grades = 'C' 
+elif (((num1+num2+num3+num4+num5) * 100)/500) <= 90: 
+grades = 'B' 
+else: 
+ 
+grades = 'A' 
+grade.set(grades) 
+count = 0 
+if num1 < 35: 
+ 
+count = count + 1 
+if num2 < 35: 
+count = count + 1 
+if num3 < 35: 
+54 
+ count = count + 1 
+if num4 < 35: 
+count = count + 1 
+if num5 < 35: 
+count = count + 1 
+if (count == 0): 
+result.set('PASS') 
+ 
+elif (count == 1 or count == 2 ): 
+result.set('SUPPLY') 
+else: 
+ 
+result.set('FAIL') 
+ 
+if Percentage <= 45 and result != "FAIL": 
+ 
+div.set('THIRD') 
+ 
+elif Percentage <= 60 and result != "FAIL": 
+ 
+div.set('SECOND') 
+elif Percentage <= 100: 
+div.set('FIRST') 
+ 
+Frame_1 = LabelFrame(root, width = 1200, height = 400, font = ('arial',20,'bold'), bg = 'light blue', 
+bd = 10, \ 
+text = 'Student Details', relief = 'ridge') 
+Frame_1.grid(row = 1, column = 0, pady = 20, padx = 20) 
+name = StringVar(Frame_1,value=row[0][1]) 
+roll = StringVar(Frame_1,value=row[0][2]) 
+father_name = StringVar(Frame_1,value=row[0][3]) 
+mother_name = StringVar(Frame_1,value=row[0][4]) 
+Text_Entry11 = Entry(Frame_2, font = ('arial',14,'bold'), width = 7, textvariable = result) 
+55 
+ Text_Entry11.grid(row = 11, column = 3, padx = 20, pady = 8) 
+ 
+Text_Entry_1_2 = Entry(Frame_2, textvariable = variables_1, font = ('arial',16), width = 5) 
+Text_Entry_1_2.grid(row = 4, column = 2, pady = 5) 
+Text_Entry_1_3 = Entry(Frame_2, textvariable = variables_2, font = ('arial',16), width = 5) 
+Text_Entry_1_3.grid(row = 4, column = 3) 
+Text_Entry_2_2 = Entry(Frame_2, textvariable = variables_1, font = ('arial',16), width = 5) 
+Text_Entry_2_2.grid(row = 5, column = 2, pady = 5) 
+Text_Entry_2_3 = Entry(Frame_2, textvariable = variables_2, font = ('arial',16), width = 5) 
+Text_Entry_2_3.grid(row = 5, column = 3) 
+Text_Entry_3_2 = Entry(Frame_2, textvariable = variables_1, font = ('arial',16), width = 5) 
+Text_Entry_3_2.grid(row = 6, column = 2, pady = 5) 
+Text_Entry_3_3 = Entry(Frame_2, textvariable = variables_2, font = ('arial',16), width = 5) 
+Text_Entry_3_3.grid(row = 6, column = 3) 
+Text_Entry_4_2 = Entry(Frame_2, textvariable = variables_1, font = ('arial',16), width = 5) 
+Text_Entry_4_2.grid(row = 7, column = 2, pady = 5) 
+Text_Entry_4_3 = Entry(Frame_2, textvariable = variables_2, font = ('arial',16), width = 5) 
+Text_Entry_4_3.grid(row = 7, column = 3) 
+Text_Entry_5_2 = Entry(Frame_2, textvariable = variables_1, font = ('arial',16), width = 5) 
+Text_Entry_5_2.grid(row = 8, column = 2, pady = 5) 
+Text_Entry_5_3 = Entry(Frame_2, textvariable = variables_2, font = ('arial',16), width = 5) 
+Text_Entry_5_3.grid(row = 8, column = 3) 
+Text_Entry_6_3 = Entry(Frame_2, textvariable = variables_3, font = ('arial',16), width = 5) 
+Text_Entry_6_3.grid(row = 9, column = 3) 
+Exit_button = Button(Frame_2, text = 'EXIT', font = ('arial',12,'bold'), width = 10, command = 
+root.destroy) 
+Exit_button.grid(row = 8, column = 4, padx = 50, pady = 6) 
+56 
+ root.mainloop() 
+ 
+if name == ' main ': 
+  
+ 
+marking_sheet() 
+ 
+Marksheet back end 
+from tkinter import* 
+import sqlite3 
+def connect(): 
+ 
+con = sqlite3.connect('College_Marks.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('CREATE TABLE IF NOT EXISTS Marks (id INTEGER PRIMARY KEY, name 
+text, roll integer, father_name text, mother_name \ 
+ 
+text, date_of_birth integer, gender text, school text, email_address text, marks1 
+integer, marks2 integer, marks3 integer, marks4 integer, \ 
+ 
+marks5 integer, grand_tot integer, percentage integer, cgpa integer, grade text, 
+division text, result text)') 
+ 
+con.commit() 
+ 
+con.close() 
+ 
+def insert(name = ' ', roll = ' ', father_name =' ', mother_name =' ', date_of_birth =' ', gender =' ', 
+school =' ', email_address =' ', marks1 =' ', marks2 =' ', \ 
+ 
+marks3 =' ', marks4 =' ', marks5 =' ', grand_tot =' ', percentage =' ', cgpa =' ', grade =' ', 
+division =' ', result =' '): 
+con = sqlite3.connect('College_Marks.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('INSERT INTO Marks VALUES (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', 
+(name, roll, father_name, mother_name, date_of_birth, gender, \ 
+ 
+ 
+school, email_address, marks1, 
+ 
+marks2, marks3, marks4, marks5, grand_tot, percentage, \ 
+ 
+cgpa, grade, division, result)) 
+57 
+ con.commit() 
+ 
+con.close() 
+'''def view(): 
+con = sqlite3.connect('College_Marks.db') 
+ 
+cur = con.cursor() 
+cur.execute('SELECT * FROM Marks') 
+con.commit() 
+con.close() 
+ 
+def delete(id): 
+ 
+con = sqlite3.connect('College_Marks.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('DELETE FROM Marks WHERE id = ?)',(id,)) 
+con.commit() 
+con.close()''' 
+ 
+def update(id, name = ' ', roll = ' ', father_name =' ', mother_name =' ', date_of_birth =' ', gender 
+=' ', school =' ', email_address =' ', marks1 =' ', marks2 =' ', \ 
+ 
+marks3 =' ', marks4 =' ', marks5 =' ', grand_tot =' ', percentage =' ', cgpa =' ', grade =' ', 
+division =' ', result =' '): 
+con = sqlite3.connect('College_Marks.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('UPDATE Marks SET name = ? OR roll = ? OR father_name = ? OR 
+mother_name = ? OR date_of_birth = ? OR gender = ? OR \ 
+school = ? OR email_address = ? OR marks1 = ? OR marks2 = ? OR marks3 = ? 
+OR marks4 = ? OR marks5 = ? OR grand_tot = ? OR percentage = ? OR \ 
+ 
+cgpa = ? OR grade = ? OR division = ? OR result = ?', (name, roll, father_name, 
+mother_name, date_of_birth, gender, school, email_address, marks1, marks2, marks3, \ 
+marks4, marks5, grand_tot, percentage, cgpa, 
+grade)) 
+58 
+ con.commit() 
+ 
+con.close() 
+ 
+def search(roll): 
+ 
+con = sqlite3.connect('College_Marks.db') 
+ 
+cur = con.cursor() 
+ 
+cur.execute('SELECT * FROM Marks WHERE roll = ?',(roll,)) 
+ 
+row = cur.fetchall() 
+return row 
+connect( 
+59 
+ 
